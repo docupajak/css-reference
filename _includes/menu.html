@@ -30,21 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <aside class="menu">
   <a id="logo" class="menu-logo" href="{{site.url}}">
-    <img src="{{site.url}}/images/css-reference-logo.png" alt="{{site.title}} logo">
+    <img src="{{ relBase }}/assets/png/tiger.png" alt="{{ site.title }} Logo">
   </a>
-  <nav class="menu-collections">
-    <ul>
-      <li><a class="menu-collection-link{% if page.template == 'index' %} menu-collection-link--active{% endif %}" href="{{site.url}}/">All properties</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Animations' %} menu-collection-link--active{% endif %}" href="{{site.url}}/animations/">Animations</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Backgrounds' %} menu-collection-link--active{% endif %}" href="{{site.url}}/backgrounds/">Backgrounds</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Box model' %} menu-collection-link--active{% endif %}" href="{{site.url}}/box-model/">Box model</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Flexbox' %} menu-collection-link--active{% endif %}" href="{{site.url}}/flexbox/">Flexbox</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Grid' %} menu-collection-link--active{% endif %}" href="{{site.url}}/css-grid/">CSS Grid</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Positioning' %} menu-collection-link--active{% endif %}" href="{{site.url}}/positioning/">Positioning</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Transitions' %} menu-collection-link--active{% endif %}" href="{{site.url}}/transitions/">Transitions</a></li>
-      <li><a class="menu-collection-link{% if page.collection_name == 'Typography' %} menu-collection-link--active{% endif %}" href="{{site.url}}/typography/">Typography</a></li>
-    </ul>
-  </nav>
   {% if page.template != "index" %}
     <nav id="menu-nav" class="menu-nav">
       <div class="menu-search">
@@ -68,9 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
       </a>
     </nav>
   {% endif %}
-  <footer class="menu-hello">
-    {% include carbon.html %}
-  </footer>
 </aside>
 
 <footer class="footer">
@@ -83,12 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
     {% include social/button-facebook.html %}
     <a id="menu-nav-open" class="footer-share-nav">Menu</a>
   </p>
-  <div class="footer-facebook">
-    <iframe class="footer-iframe" data-src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fcssreference%2F&width=100&layout=button_count&action=like&size=small&show_faces=false&share=false&height=20&appId=1212191075486670" width="100" height="20" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-  </div>
-  <div class="footer-github">
-    <iframe class="footer-iframe" data-src="https://ghbtns.com/github-btn.html?user=jgthms&repo=css-reference&type=star&count=true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
-  </div>
   <!-- <p class="footer-share footer-share--contribute">
     <strong class="footer-share-label">Contribute</strong>
     <a class="footer-share-button is-github" href="https://github.com/jgthms/css-reference" target="_blank">

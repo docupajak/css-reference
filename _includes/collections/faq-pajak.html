@@ -1,0 +1,8 @@
+<ul>
+  {% for faq in site.faq %}
+    <li>
+      <a href="{{ faq.url }}">{{ faq.title }}</a>
+      - {{ faq.tags }}
+    </li>
+  {% endfor %}
+</ul>
