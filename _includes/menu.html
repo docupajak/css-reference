@@ -39,15 +39,15 @@ document.addEventListener('DOMContentLoaded', function() {
         <i class="icon is-search"></i>
       </div>
       <div id="menu-list" class="menu-list">
-        <ul id="menu-list-ul" class="menu-list-ul">
+        <ul id="menu-list-ul" class="menu-list-ul">halo-1
           {% if page.menu_list && page.layout == "collection" %}
             {% include collections/{{page.menu_list}}.html %}
           {% else %}
             {% include lists/menu-list.html %}
           {% endif %}
         </ul>
-        <i id="menu-shadow-top" class="menu-list-shadow is-top"></i>
-        <i id="menu-shadow-bottom" class="menu-list-shadow is-bottom"></i>
+        <i id="menu-shadow-top" class="menu-list-shadow is-top">halo-2</i>
+        <i id="menu-shadow-bottom" class="menu-list-shadow is-bottom">halo-3</i>
       </div>
       <a id="menu-nav-close" class="menu-close">
         <i class="icon is-close"></i>
