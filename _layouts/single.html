@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html class="is-single" data-template="single">
   <head>
+      {% include relBase.html %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
     <title>{{tag.title}} - {{site.title}}</title>
     <meta name="description" content="Learn how {{page.property_name}} works in CSS.">
-    <link rel="stylesheet" type="text/css" href="{{site.url}}/assets/css/website.css?v={{ site.time | date: "%Y%m%d%H%M" }}">
+    <link rel="stylesheet" type="text/css" href="{{ "/assets/css/website.css?v=" | prepend: site.baseurl | prepend: site.url }}" />
 
     <meta property="og:url" content="{{site.url}}{{page.url}}">
     <meta property="og:type" content="website">
@@ -37,9 +38,9 @@
     </main>
     <!--{% include modals/share.html %}-->
     {% include google-fonts.html %}
-    <script src="{{site.url}}/javascript/clipboard.min.js"></script>
-    <script src="{{site.url}}/javascript/main.js"></script>
-    <script src="{{site.url}}/javascript/single.js"></script>
+    <script src="{{"/javascript/clipboard.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+    <script src="{{"/javascript/main.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+    <script src="{{"/javascript/single.js" | prepend: site.baseurl | prepend: site.url }}"></script>
     {% include noscript.html %}
   </body>
 </html>
