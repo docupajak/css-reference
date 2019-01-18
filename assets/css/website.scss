@@ -1,0 +1,45 @@
+@charset "utf-8";
+//@import "minireset"
+@import "minireset";
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "tooltip";
+
+@import "base.scss";
+@import "controls";
+@import "menu";
+@import "header";
+@import "footer";
+@import "index";
+@import "finder";
+@import "heading";
+@import "list";
+@import "property";
+@import "example";
+@import "modal";
+@import "keyframes";
+@import "sister";
+
+@import "elements";
+@import "ff";
+
+@import "scrollbar";
+
+.modal,
+.bsa-cpc {
+  z-index: 50
+}
+.menu {
+  z-index: 40
+}
+.footer
+  {z-index: 30}
+
+.properties,
+.list {
+  z-index: 20
+}
+.header {
+  z-index: 10
+}

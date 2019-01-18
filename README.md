@@ -11,3 +11,6 @@ The underlying source code used to format and display that content is licensed u
 # Sponsor
 
 
+# product
+npm install -g mirror-config-china --registry=http://registry.npm.taobao.org
+npm install node-sass

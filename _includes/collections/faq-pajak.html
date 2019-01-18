@@ -1,8 +1,39 @@
-<ul>
+<section id="{{page.title}}" class="property property--shorthand">
+  <header class="property-header">
+    <!--<nav class="property-links"><a class="property-collection" href="{{site.url}}/css-grid/">In collection: <strong>CSS
+          Grid</strong> </a><a class="property-links-direct" href="{{site.url}}/property/grid-area/" data-property-name="grid-area"
+        data-tooltip="Single page for this property">Permalink</a> <a class="property-share" data-tooltip="Share on Twitter or Facebook"
+        data-property-name="grid-area">Share</a> <a target="_blank" href="http://caniuse.com/#feat=css-grid"
+        data-tooltip="See on Can I use..." rel="external">Can I use</a> <a target="_blank" href="https://developer.mozilla.org/en/docs/Web/CSS/grid-area"
+        data-tooltip="See on Mozilla Developer Network" rel="external">MDN</a></nav>-->
+    <h2 class="property-name"><a href="#{{page.title}}"><span>#</span>{{page.title}}</a></h2>
+    <div class="property-description">
+      <p>{{page.description}}</p>
+    </div>
+  </header>
+
+  <!-- content -->
   {% for faq in site.faq %}
-    <li>
-      <a href="{{ faq.url }}">{{ faq.title }}</a>
-      - {{ faq.tags }}
-    </li>
+  <section class="example">
+    <header class="example-header">
+      <p class="example-name">
+        
+        {% for tags in faq.tags %}
+        <code class="example-default" data-tooltip="This is the property's default value">
+          <a href="http://localhost:3000/property/grid-row-start" data-property-name="grid-row-start">
+            {{ faq.tags }}
+          </a>
+        </code>
+        {% endfor %}
+
+        {{ faq.title }}
+      <div class="example-description">
+        <code class="example-value" data-tooltip="Click to copy" data-clipboard-text="{{ faq.content }}">{{ faq.content }}</code></p>
+      </div>
+    </header>
+    <aside class="example-preview">
+
+    </aside>
+  </section>
   {% endfor %}
-</ul>
+</section>
